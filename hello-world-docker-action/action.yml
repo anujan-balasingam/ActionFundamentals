@@ -3,12 +3,13 @@ name: 'What it do baybee'
 description: 'Greet someone and record the time'
 inputs: 
   who-to-greet: # id of input
-  description: 'Who to greetz'
-  required: true
-  default: 'baybee'
+    description: 'Who to greetz'
+    required: true
+    default: 'baybee'
 outputs:
   time: # id of output
-  description: 'The time we greeted'
- runs: 'docker'
- image: 'Dockerfile'
- args: - ${{ inputs.who-to-greet }}
+    description: 'The time we greeted'
+    runs: 'docker'
+    image: 'Dockerfile'
+    args: 
+      - ${{ inputs.who-to-greet }}
